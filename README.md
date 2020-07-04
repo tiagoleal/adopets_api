@@ -25,8 +25,6 @@
 ## Stack the Project
 
 - **Yarn**
-- **Ant Design**
-- **React**
 - **NodeJS**
 - **ExpressJS**
 - **SQLite3**
