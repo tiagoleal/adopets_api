@@ -1,12 +1,7 @@
-<!-- <p align="center">
-  <a href="#">
-   <img alt="Secret Friend" src="https://github.com/tiagoleal/secret_friend/blob/master/app/assets/images/logo.png?raw=true" width="50">
-  </a>
-</p> -->
 <h1 align="center">Adopets Test API</h1>
 
 <p align="center">
-  <a href="https://github.com/tiagoleal/coin_conversion">
+  <a href="https://github.com/tiagoleal/adopets_api">
     <img alt="Current Version" src="https://img.shields.io/badge/version-1.0.0 -blue.svg">
   </a>
 
@@ -25,8 +20,6 @@
 ## Stack the Project
 
 - **Yarn**
-- **Ant Design**
-- **React**
 - **NodeJS**
 - **ExpressJS**
 - **SQLite3**
