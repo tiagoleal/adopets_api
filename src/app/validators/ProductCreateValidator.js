@@ -5,8 +5,9 @@ const productCreateValidator = celebrate({
     name: Joi.string().required().min(3),
     description: Joi.string().required(),
     category_id: Joi.number().required().min(1),
-    price: Joi.number().required(),
+    price: Joi.string().required(),
     stock: Joi.number().required(),
+    stockMask: Joi.number(),
   }),
 });
 

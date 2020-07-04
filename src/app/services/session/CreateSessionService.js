@@ -37,10 +37,10 @@ class CreateSessionService {
       token,
     };
 
-    const log = `Auth Token: id:${id} - name:${name} - email:${email} - token:${token}`;
+    const log = `Auth: id:${id} - name:${name} - email:${email}`;
     await CreateLogsService.create({
       user_id: id,
-      action: 'Auth Token',
+      action: 'Auth User',
       log,
     });
 

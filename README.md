@@ -1,47 +1,43 @@
-<p align="center">
+<!-- <p align="center">
   <a href="#">
    <img alt="Secret Friend" src="https://github.com/tiagoleal/secret_friend/blob/master/app/assets/images/logo.png?raw=true" width="50">
   </a>
-</p>
-<p align="center">Adopets Test API</p>
+</p> -->
+<h1 align="center">Adopets Test API</h1>
 
 <p align="center">
   <a href="https://github.com/tiagoleal/coin_conversion">
     <img alt="Current Version" src="https://img.shields.io/badge/version-1.0.0 -blue.svg">
   </a>
-  <a href="#" title="Circleci">
-    <img alt="Circleci Status" src="https://circleci.com/gh/tiagoleal/secret_friend.svg?style=svg" target="_blank">
+
+  <a href="https://nodejs.org/en/">
+    <img alt="Node Version" src="https://img.shields.io/badge/node-%3E%3D%2012.18.2-brightgreen" target="_blank">
   </a>
-  <a href="https://ruby-doc.org/core-2.6.2/">
-    <img alt="Ruby Version" src="https://img.shields.io/badge/Ruby-2.6.2 -green.svg" target="_blank">
+  <a href="https://expressjs.com/pt-br/">
+    <img alt="" src="https://img.shields.io/badge/Express-4.17.1-red.svg" target="_blank">
   </a>
-  <a href="https://guides.rubyonrails.org/5_2_release_notes.html">
-    <img alt="" src="https://img.shields.io/badge/Rails-~> 5.2.2-blue.svg" target="_blank">
+  <a href="https://jestjs.io/">
+    <img alt="" src="https://img.shields.io/badge/Jest-25.2.3-blue.svg" target="_blank">
   </a>
 
 </p>
 
-Secret friend app allows you to automatically raffle a secret friend and send the information of the one you raffled by email.
-
-## Screenshot
-
-![](https://github.com/tiagoleal/secret_friend/blob/master/app/assets/images/secret_friend.gif?raw=true)
-
 ## Stack the Project
 
 - **Yarn**
-- **Materialize**
-- **Redis**
-- **Sidekiq(Jobs)**
-- **Postgresql**
-- **Capybara**
-- **Rspec(TDD)**
-- **Circleci**
+- **Ant Design**
+- **React**
+- **NodeJS**
+- **ExpressJS**
+- **SQLite3**
+- **Jest(TDD)**
 
 ## Features
 
-- **Raffle secret friend:** Make the raffle of the secret friend automatic.
-- **Send Mail:** Send mail with raffle with of the people of the campaign.
+- **Authentication:** Login, Logout.
+- **Product:** Register, Edit, Delete and list/Seach(Filters by name, description and category), incluir também opção de Paginação.
+- **Logs:** Save logs of everything the user does in the API,
+  save error logs.
 
 ## Getting Started
 
@@ -51,32 +47,31 @@ These instructions will get you a copy of the project up and running on your loc
 
 You must have installed on your machine:
 
-- Docker
-- Docker Compose
+- Node
+- NPM
 
 ### Installing
 
 First step is to install the docker service:
 
 ```bash
-#Linux: ubuntu,Mint
-$ sudo apt-get update
-$ sudo apt-get install docker-ce
-$ sudo apt install docker-compose
+# Using Ubuntu
+$ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+$ sudo apt-get install -y nodejs
 
-# Fedora
-$ sudo dnf update -y
-$ sudo dnf install docker-ce
-$ sudo dnf -y install docker-compose
+# Using Debian, as root
+# curl -sL https://deb.nodesource.com/setup_12.x | bash -
+# apt-get install -y nodejs
+
 ```
 
-For test if the service was installed with succeed, you can run the command for to check de version of docker:
+For test if the service was installed with succeed, you can run the command for to check de version of Node:
 
 ```bash
-$ docker --version
-#Must be have the docker version: Docker version 18.06.0-ce
-$ docker-compose --version
-#Must be have the docker-compose version: docker-compose version 1.22.0
+$ node -v
+# Must be have the node version: v12.18.2
+$ npm -v
+# Must be have the npm version: 6.14.5
 ```
 
 ## First steps
@@ -84,36 +79,33 @@ $ docker-compose --version
 Follow the instructions to have a project present and able to run it locally.
 After copying the repository to your machine, go to the project's root site and:
 
-1.  Construct the container
+1.  Install dependencies
 
 ```
-docker-compose build
+$ yarn install
 ```
 
-2.  Create of Database
+2.  Create database structure
 
 ```
-docker-compose run --rm app bundle exec rails db:create
+$ yarn knex:migrate
+$ yarn knex:seed
 ```
 
-3. Without turning off the server, open a new window and run the migrations
+3.  Run Project
 
 ```
-docker-compose run --rm app bundle exec rails db:migrate #if necessary populate database
-```
-
-4.  Run the project
-
-```
-docker-compose up - d
+$ yarn start #production
+#ou
+$ yarn dev #development
 ```
 
 ## Running the tests
 
-To run the tests, you must run the docker container through the command:
+To run the tests just run the following command:
 
 ```
-docker-compose run --rm app bundle exec rspec
+$ yarn test
 ```
 
 ## Authors
