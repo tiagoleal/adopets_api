@@ -6,7 +6,7 @@
 <h1 align="center">Adopets Test API</h1>
 
 <p align="center">
-  <a href="https://github.com/tiagoleal/coin_conversion">
+  <a href="https://github.com/tiagoleal/adopets_api">
     <img alt="Current Version" src="https://img.shields.io/badge/version-1.0.0 -blue.svg">
   </a>
 
